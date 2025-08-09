@@ -1,0 +1,122 @@
+/* Custom Nodes Styles */
+
+.custom-node {
+    padding: 12px;
+    border-radius: 8px;
+    min-width: 180px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease, transform 0.1s ease;
+  }
+  
+  .custom-node.selected {
+    box-shadow: 0 0 0 2px #0366d6, 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .custom-node:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  }
+  
+  .node-content {
+    position: relative;
+  }
+  
+  .node-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .node-icon {
+    font-size: 18px;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .node-title {
+    font-weight: 600;
+    font-size: 14px;
+    color: #24292e;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .node-details {
+    font-size: 12px;
+  }
+  
+  .node-property {
+    display: flex;
+    margin-bottom: 4px;
+  }
+  
+  .property-label {
+    color: #586069;
+    margin-right: 4px;
+  }
+  
+  .property-value {
+    color: #24292e;
+    font-weight: 500;
+  }
+  
+  /* Specific nodes styling */
+  
+  /* Trigger Node */
+  .trigger-node {
+    background-color: #ffefc9;
+    border: 1px solid #f0d691;
+  }
+  
+  /* AI Agent Node */
+  .ai-agent-node {
+    background-color: #e1f5fe;
+    border: 1px solid #b3e5fc;
+  }
+  
+  /* Tool Node */
+  .tool-node {
+    background-color: #e8f5e9;
+    border: 1px solid #c8e6c9;
+  }
+  
+  /* Output Node */
+  .output-node {
+    background-color: #f3e5f5;
+    border: 1px solid #e1bee7;
+  }
+  
+  /* Handle styling */
+  .react-flow__handle {
+    width: 8px;
+    height: 8px;
+    background-color: #0366d6;
+    border: 1px solid #fff;
+  }
+  
+  .react-flow__handle-top {
+    top: -4px;
+  }
+  
+  .react-flow__handle-bottom {
+    bottom: -4px;
+  }
+  
+  /* Edge styling */
+  .react-flow__edge-path {
+    stroke: #0366d6;
+    stroke-width: 2;
+  }
+  
+  .react-flow__edge.selected .react-flow__edge-path {
+    stroke: #f50057;
+    stroke-width: 3;
+  }
+  
+  /* Node selection */
+  .react-flow__node.selected .custom-node {
+    box-shadow: 0 0 0 2px #0366d6, 0 2px 4px rgba(0, 0, 0, 0.1);
+  }

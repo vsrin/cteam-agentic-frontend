@@ -1,0 +1,130 @@
+projects/
+  Dockerfile
+  DockerfileZone.Identifier [empty]
+  README
+  README.md
+  README.mdZone.Identifier [empty]
+  apprunner.yaml
+  package-lock.json
+  package-lock.jsonZone.Identifier [empty]
+  package.json
+  package.jsonZone.Identifier [empty]
+  print_folder.sh
+  public/
+    favicon.ico
+    favicon.icoZone.Identifier [empty]
+    index.html
+    index.htmlZone.Identifier [empty]
+    logo192.png
+    logo192.pngZone.Identifier [empty]
+    logo512.png
+    logo512.pngZone.Identifier [empty]
+    manifest.json
+    manifest.jsonZone.Identifier [empty]
+    robots.txt
+    robots.txtZone.Identifier [empty]
+  src/
+    App.css
+    App.cssZone.Identifier [empty]
+    App.js
+    App.jsZone.Identifier [empty]
+    ThemeContext.js
+    ThemeContext.jsZone.Identifier [empty]
+    axios/
+      api.js
+      api.jsZone.Identifier [empty]
+    components/
+      ChatButton.js
+      ChatInterface.js
+      ChatInterface.jsZone.Identifier [empty]
+      ChatInterfactNormal.js
+      ChatModal.js
+      Header.js
+      Header.jsZone.Identifier [empty]
+      Sidebar.js
+      Sidebar.jsZone.Identifier [empty]
+      StructuredOutputBuilder.css
+      StructuredOutputBuilder.js
+      WorkflowVisual.js
+      WorkflowVisual.jsZone.Identifier [empty]
+    index.css
+    index.cssZone.Identifier [empty]
+    index.js
+    index.jsZone.Identifier [empty]
+    modules/
+      ExampleSidebar.jsx
+      ExampleSidebar.jsxZone.Identifier [empty]
+      workflow-builder/
+        AgenticWorkflowModule.jsx
+        AgenticWorkflowModule.jsxZone.Identifier [empty]
+        WorkflowBuilder.css
+        WorkflowBuilder.cssZone.Identifier [empty]
+        WorkflowBuilder.jsx
+        WorkflowBuilder.jsxZone.Identifier [empty]
+        components/
+          NodesPalette.css
+          NodesPalette.cssZone.Identifier [empty]
+          NodesPalette.jsx
+          NodesPalette.jsxZone.Identifier [empty]
+          PropertiesPanel.css
+          PropertiesPanel.cssZone.Identifier [empty]
+          PropertiesPanel.jsx
+          PropertiesPanel.jsxZone.Identifier [empty]
+          WorkflowControls.css
+          WorkflowControls.cssZone.Identifier [empty]
+          WorkflowControls.jsx
+          WorkflowControls.jsxZone.Identifier [empty]
+          WorkflowExamples.css
+          WorkflowExamples.cssZone.Identifier [empty]
+          WorkflowExamples.jsx
+          WorkflowExamples.jsxZone.Identifier [empty]
+        nodes/
+          AIAgentNode.jsx
+          AIAgentNode.jsxZone.Identifier [empty]
+          CustomNodes.css
+          CustomNodes.cssZone.Identifier [empty]
+          OutputNode.jsx
+          OutputNode.jsxZone.Identifier [empty]
+          ToolNode.jsx
+          ToolNode.jsxZone.Identifier [empty]
+          TriggerNode.jsx
+          TriggerNode.jsxZone.Identifier [empty]
+        services/
+          flowiseApi.js
+          flowiseApi.jsZone.Identifier [empty]
+          workflowExamples.js
+          workflowExamples.jsZone.Identifier [empty]
+    reportWebVitals.js
+    reportWebVitals.jsZone.Identifier [empty]
+    styles/
+      AddToolStyles.css
+      AddToolStyles.cssZone.Identifier [empty]
+    views/
+      AddToolView.js
+      AddToolView.jsZone.Identifier [empty]
+      AgentBuilderView.js
+      AgentBuilderView.jsZone.Identifier [empty]
+      AgentCatalogView.js
+      AgentCatalogView.jsZone.Identifier [empty]
+      HomeView.js
+      HomeView.jsZone.Identifier [empty]
+      KnowledgeAssetView.js
+      KnowledgeAssetView.jsZone.Identifier [empty]
+      KnowledgeBaseCreateView.js
+      KnowledgeBaseCreateView.jsZone.Identifier [empty]
+      ProgressiveAgentBuilderView.js
+      ProjectsView.js
+      ProjectsView.jsZone.Identifier [empty]
+      SettingsView.js
+      SettingsView.jsZone.Identifier [empty]
+      SkillRecipesView.js
+      SkillRecipesView.jsZone.Identifier [empty]
+      ToolChestView.js
+      ToolChestView.jsZone.Identifier [empty]
+      WikiView.js
+      WikiView.jsZone.Identifier [empty]
+      WorkflowBuilderView.js
+      WorkflowBuilderView.jsZone.Identifier [empty]
+      WorkflowVisual.js
+      WorkflowVisual.jsZone.Identifier [empty]
+  structure.txt

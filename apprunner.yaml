@@ -1,0 +1,8 @@
+version: 1.0
+service:
+  source:
+    type: image
+    imageConfiguration:
+      port: 80
+    image:
+      type: dockerfile

@@ -1,0 +1,234 @@
+/* WorkflowBuilder.css */
+
+.workflow-builder {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.workflow-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid var(--light-gray);
+  background-color: var(--white);
+}
+
+.workflow-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+  margin-right: 1rem;
+}
+
+.workflow-name-input {
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 0.5rem;
+  border: 1px solid transparent;
+  border-radius: 0.375rem;
+  background-color: transparent;
+  width: 100%;
+}
+
+.workflow-name-input:focus {
+  border-color: var(--light-gray);
+  outline: none;
+  background-color: var(--white);
+}
+
+.workflow-description-input {
+  font-size: 0.875rem;
+  padding: 0.5rem;
+  border: 1px solid transparent;
+  border-radius: 0.375rem;
+  background-color: transparent;
+  width: 100%;
+  resize: none;
+  min-height: 2.5rem;
+  color: var(--secondary-color);
+}
+
+.workflow-description-input:focus {
+  border-color: var(--light-gray);
+  outline: none;
+  background-color: var(--white);
+}
+
+.workflow-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.nodes-palette {
+  width: 250px;
+  padding: 1rem;
+  border-right: 1px solid var(--light-gray);
+  background-color: var(--white);
+  overflow-y: auto;
+}
+
+.reactflow-wrapper {
+  flex: 1;
+  height: 100%;
+  background-color: var(--light-accent);
+  position: relative;
+}
+
+.properties-panel {
+  width: 300px;
+  padding: 1rem;
+  border-left: 1px solid var(--light-gray);
+  background-color: var(--white);
+  overflow-y: auto;
+}
+
+.no-selection-message {
+  color: var(--secondary-color);
+  font-size: 0.875rem;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.execution-results {
+  padding: 1rem;
+  border-top: 1px solid var(--light-gray);
+  background-color: var(--white);
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.execution-results h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.execution-results pre {
+  background-color: var(--background-alt);
+  padding: 1rem;
+  border-radius: 0.375rem;
+  overflow-x: auto;
+  font-family: monospace;
+  font-size: 0.875rem;
+}
+
+/* ReactFlow custom styling */
+.react-flow__node {
+  width: auto;
+  min-width: 150px;
+  z-index: 5;
+}
+
+.react-flow__edge {
+  z-index: 4;
+}
+
+.react-flow__controls {
+  box-shadow: 0 2px 6px var(--shadow-color);
+}
+
+/* Empty Canvas Guide */
+.empty-canvas-guide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.guide-content {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 500px;
+  pointer-events: auto;
+}
+
+.guide-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.guide-content p {
+  font-size: 0.9375rem;
+  color: var(--secondary-color);
+  margin-bottom: 1.5rem;
+}
+
+.guide-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.guide-btn {
+  padding: 0.75rem 1.25rem;
+  background-color: var(--accent-color);
+  color: var(--white);
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.guide-btn:hover {
+  background-color: var(--hover-color);
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .workflow-content {
+    flex-direction: column;
+  }
+  
+  .nodes-palette {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--light-gray);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+  
+  .properties-panel {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid var(--light-gray);
+  }
+}
+
+@media (max-width: 768px) {
+  .workflow-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  
+  .workflow-title {
+    margin-right: 0;
+  }
+  
+  .guide-content {
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+}

@@ -1,0 +1,121 @@
+/* Properties Panel Styles */
+
+.properties-panel-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .properties-header {
+    padding: 16px;
+    border-bottom: 1px solid #e1e4e8;
+    background-color: #f6f8fa;
+  }
+  
+  .properties-header h3 {
+    margin: 0 0 4px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #24292e;
+  }
+  
+  .node-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #6a737d;
+  }
+  
+  .properties-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+  }
+  
+  .property-group {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e1e4e8;
+  }
+  
+  .property-group:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  
+  .property-group h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+    color: #24292e;
+  }
+  
+  .property-field {
+    margin-bottom: 12px;
+  }
+  
+  .property-field:last-child {
+    margin-bottom: 0;
+  }
+  
+  .property-field label {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: #586069;
+  }
+  
+  .property-field input[type="text"],
+  .property-field input[type="number"],
+  .property-field select,
+  .property-field textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    background-color: #fff;
+  }
+  
+  .property-field input[type="text"]:focus,
+  .property-field input[type="number"]:focus,
+  .property-field select:focus,
+  .property-field textarea:focus {
+    outline: none;
+    border-color: #0366d6;
+    box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.2);
+  }
+  
+  .property-field textarea {
+    resize: vertical;
+    min-height: 60px;
+  }
+  
+  .property-field input[type="range"] {
+    width: 100%;
+  }
+  
+  .basic-info {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #e1e4e8;
+  }
+  
+  /* Node property display within the panel */
+  .node-property {
+    display: flex;
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+  
+  .property-label {
+    font-weight: 500;
+    color: #586069;
+    width: 80px;
+    flex-shrink: 0;
+  }
+  
+  .property-value {
+    color: #24292e;
+  }

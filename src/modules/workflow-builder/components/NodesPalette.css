@@ -1,0 +1,42 @@
+/* components/NodesPalette.css */
+.nodes-palette-container {
+  padding: 15px;
+}
+
+.nodes-palette-container h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #333;
+}
+
+.nodes-list {
+  display: flex;
+  flex-direction: column; 
+  gap: 10px;
+}
+
+.node-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: move;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.node-item:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+.node-icon {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.node-label {
+  font-size: 14px;
+}
