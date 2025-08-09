@@ -3,3 +3,4 @@ reduced the comment length
 changed IAM policy ListCommandInvocations
 Added Resourse group to the policy
 changed the deployment file
+changed the access issue (ECR TO EC2)
