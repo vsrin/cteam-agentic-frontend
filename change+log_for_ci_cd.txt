@@ -1,3 +1,4 @@
 Changed IAM policy for send role form AWS
 reduced the comment length
 changed IAM policy ListCommandInvocations
+Added Resourse group to the policy
