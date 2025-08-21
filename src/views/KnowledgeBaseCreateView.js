@@ -66,7 +66,7 @@ const KnowledgeBaseCreateView = ({ onBack, initialData = null }) => {
     if (!nameToCheck) return false;
     if (isEditMode && initialData && initialData.name === nameToCheck) return true;
     try {
-      const response = await fetch('http://16.170.162.72:5001/api/knowledge-bases');
+      const response = await fetch('https://integration.enowclear360.com/api/knowledge-bases');
       const knowledgeBases = await response.json();
       return !knowledgeBases.some(kb => kb.name.toLowerCase() === nameToCheck.toLowerCase());
     } catch (error) {
@@ -112,7 +112,7 @@ const KnowledgeBaseCreateView = ({ onBack, initialData = null }) => {
     formData.append('scoreThreshold', scoreThreshold);
 
     try {
-      const response = await fetch('http://16.170.162.72:5001/api/knowledge-bases', {
+      const response = await fetch('https://integration.enowclear360.com/api/knowledge-bases', {
         method: 'POST',
         body: formData
       });
@@ -196,7 +196,7 @@ const KnowledgeBaseCreateView = ({ onBack, initialData = null }) => {
       formData.append('scoreThreshold', scoreThreshold);
 
       try {
-        const response = await fetch('http://16.170.162.72:5001/api/knowledge-bases', {
+        const response = await fetch('https://integration.enowclear360.com/api/knowledge-bases', {
           method: 'POST',
           body: formData
         });
@@ -236,7 +236,7 @@ const KnowledgeBaseCreateView = ({ onBack, initialData = null }) => {
     }
     setIsLoading(true);
     try {
-      const response = await fetch(`http://16.170.162.72:5001/api/knowledge-bases/${kbId}/search`, {
+      const response = await fetch(`https://integration.enowclear360.com/api/knowledge-bases/${kbId}/search`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ query: searchQuery, numberOfChunks })
@@ -247,7 +247,7 @@ const KnowledgeBaseCreateView = ({ onBack, initialData = null }) => {
 
         if (isChatMode) {
           const chunkText = results.map(chunk => chunk.text).join('\n\n');
-          const llmResponse = await fetch('http://16.170.162.72:5001/api/llm/summarize', {
+          const llmResponse = await fetch('https://integration.enowclear360.com/api/llm/summarize', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

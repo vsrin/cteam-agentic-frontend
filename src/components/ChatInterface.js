@@ -181,7 +181,7 @@ export default function ChatInterface({ agentConfig }) {
     setIsLoading(true);
 
     try {
-      const response = await axios.post('http://16.170.162.72:8000/query', {
+      const response = await axios.post('https://fastapi.enowclear360.com/query', {
         agent_config: agentConfig,
         message: userMessage,
         thread_id: threadId,

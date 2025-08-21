@@ -28,7 +28,7 @@ const KnowledgeAssetsCatalogView = ({ onCreateNew, onEdit, onTest, onBack }) => 
   const fetchKnowledgeBases = useCallback(async () => {
     try {
       setIsLoading(true);
-      const response = await fetch('http://16.170.162.72:5001/api/knowledge-bases');
+      const response = await fetch('https://integration.enowclear360.com/api/knowledge-bases');
       if (response.ok) {
         const data = await response.json();
         setKnowledgeBases(data);
@@ -83,7 +83,7 @@ const KnowledgeAssetsCatalogView = ({ onCreateNew, onEdit, onTest, onBack }) => 
   const handleDelete = async (kb) => {
     if (window.confirm(`Are you sure you want to delete "${kb.name}"?`)) {
       try {
-        const response = await fetch(`http://16.170.162.72:5001/api/knowledge-bases/${kb.id}`, { 
+        const response = await fetch(`https://integration.enowclear360.com/api/knowledge-bases/${kb.id}`, { 
           method: 'DELETE' 
         });
         if (response.ok) {

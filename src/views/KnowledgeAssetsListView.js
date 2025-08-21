@@ -31,7 +31,7 @@ const KnowledgeAssetsListView = ({ onBack }) => {
   const fetchKnowledgeBases = useCallback(async () => {
     try {
       setIsLoading(true);
-      const response = await fetch('http://16.170.162.72:5001/api/knowledge-bases');
+      const response = await fetch('https://integration.enowclear360.com/api/knowledge-bases');
       if (response.ok) {
         const data = await response.json();
         setKnowledgeBases(data);
@@ -99,7 +99,7 @@ const KnowledgeAssetsListView = ({ onBack }) => {
   const handleDelete = async (kb) => {
     if (window.confirm(`Are you sure you want to delete "${kb.name}"?`)) {
       try {
-        const response = await fetch(`http://16.170.162.72:5001/api/knowledge-bases/${kb.id}`, { 
+        const response = await fetch(`https://integration.enowclear360.com/api/knowledge-bases/${kb.id}`, { 
           method: 'DELETE' 
         });
         if (response.ok) {
@@ -684,7 +684,7 @@ const RAGConfiguratorStudio = ({ onBack, initialData, mode }) => {
       setIsLoading(true);
       
       // Search for chunks
-      const searchResponse = await fetch(`http://16.170.162.72:5001/api/knowledge-bases/${kbId}/search`, {
+      const searchResponse = await fetch(`https://integration.enowclear360.com/api/knowledge-bases/${kbId}/search`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
@@ -705,7 +705,7 @@ const RAGConfiguratorStudio = ({ onBack, initialData, mode }) => {
       if (isChatMode) {
         // Generate chat response
         const chunkText = chunks.map(chunk => chunk.text).join('\n\n');
-        const llmResponse = await fetch('http://16.170.162.72:5001/api/llm/summarize', {
+        const llmResponse = await fetch('https://integration.enowclear360.com/api/llm/summarize', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -780,7 +780,7 @@ const RAGConfiguratorStudio = ({ onBack, initialData, mode }) => {
           formData.append('description', config.description);
           formData.append('embeddingModel', config.embeddingModel);
 
-          const response = await fetch(`http://16.170.162.72:5001/api/knowledge-bases/${kbId}`, {
+          const response = await fetch(`https://integration.enowclear360.com/api/knowledge-bases/${kbId}`, {
             method: 'PUT',
             body: formData
           });
@@ -817,7 +817,7 @@ const RAGConfiguratorStudio = ({ onBack, initialData, mode }) => {
       formData.append('description', config.description);
       formData.append('embeddingModel', config.embeddingModel);
 
-      const response = await fetch('http://16.170.162.72:5001/api/knowledge-bases', {
+      const response = await fetch('https://integration.enowclear360.com/api/knowledge-bases', {
         method: 'POST',
         body: formData
       });
@@ -866,8 +866,8 @@ const RAGConfiguratorStudio = ({ onBack, initialData, mode }) => {
 
       // For existing knowledge bases, use the add-documents endpoint
       const endpoint = mode === 'edit' && kbId 
-        ? `http://16.170.162.72:5001/api/knowledge-bases/${kbId}/add-documents`
-        : 'http://16.170.162.72:5001/api/knowledge-bases';
+        ? `https://integration.enowclear360.com/api/knowledge-bases/${kbId}/add-documents`
+        : 'https://integration.enowclear360.com/api/knowledge-bases';
 
       // For new knowledge bases, include all the setup data
       if (mode !== 'edit') {

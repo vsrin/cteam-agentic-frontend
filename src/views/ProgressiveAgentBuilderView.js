@@ -152,7 +152,7 @@ const ProgressiveAgentBuilderView = ({ agentData = null, onBack = () => { }, mod
   // Fetch Knowledge Bases
   useEffect(() => {
     axios
-      .get('http://16.170.162.72:8000/documents')
+      .get('https://fastapi.enowclear360.com/documents')
       .then((response) => {
         const fetchedKBs = response.data.map((doc) => ({
           id: doc._id,
@@ -1405,9 +1405,13 @@ const ProgressiveAgentBuilderView = ({ agentData = null, onBack = () => { }, mod
                 >
                   {llmProvider === 'Groq' ? (
                     <>
-                      <option value="llama-3-8b">llama-3-8b</option>
+                      <option value="llama3-70b-8192">llama3-70b-8192</option>
                       <option value="llama-4-maverick-17b">llama-4-maverick-17b</option>
                       <option value="groq-llama4-maverick">groq-llama4-maverick</option>
+                      <option value="openai/gpt-oss-120b">openai/gpt-oss-120b</option>
+                      <option value="deepseek-r1-distill-llama-70b">deepseek-r1-distill-llama-70b</option>
+                      <option value="qwen/qwen3-32b">qwen/qwen3-32b</option>
+                      <option value="openai/gpt-oss-20b">openai/gpt-oss-20b</option>
                     </>
                   ) : llmProvider === 'OpenAI' ? (
                     <>

@@ -70,7 +70,7 @@ const KnowledgeAssetsBuilderView = ({ onBack, initialData, mode = 'create' }) =>
       setIsLoading(true);
       
       // Search for chunks
-      const searchResponse = await fetch(`http://16.170.162.72:5001/api/knowledge-bases/${kbId}/search`, {
+      const searchResponse = await fetch(`https://integration.enowclear360.com/api/knowledge-bases/${kbId}/search`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
@@ -91,7 +91,7 @@ const KnowledgeAssetsBuilderView = ({ onBack, initialData, mode = 'create' }) =>
       if (isChatMode) {
         // Generate chat response
         const chunkText = chunks.map(chunk => chunk.text).join('\n\n');
-        const llmResponse = await fetch('http://16.170.162.72:5001/api/llm/summarize', {
+        const llmResponse = await fetch('https://integration.enowclear360.com/api/llm/summarize', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -166,7 +166,7 @@ const KnowledgeAssetsBuilderView = ({ onBack, initialData, mode = 'create' }) =>
           formData.append('description', config.description);
           formData.append('embeddingModel', config.embeddingModel);
 
-          const response = await fetch(`http://16.170.162.72:5001/api/knowledge-bases/${kbId}`, {
+          const response = await fetch(`https://integration.enowclear360.com/api/knowledge-bases/${kbId}`, {
             method: 'PUT',
             body: formData
           });
@@ -205,7 +205,7 @@ const KnowledgeAssetsBuilderView = ({ onBack, initialData, mode = 'create' }) =>
 
       console.log('Creating empty knowledge base with:', { name: config.name, embeddingModel: config.embeddingModel });
 
-      const response = await fetch('http://16.170.162.72:5001/api/knowledge-bases', {
+      const response = await fetch('https://integration.enowclear360.com/api/knowledge-bases', {
         method: 'POST',
         body: formData
       });
@@ -280,7 +280,7 @@ const KnowledgeAssetsBuilderView = ({ onBack, initialData, mode = 'create' }) =>
       });
 
       // Use the main endpoint like the working version does
-      const response = await fetch('http://16.170.162.72:5001/api/knowledge-bases', {
+      const response = await fetch('https://integration.enowclear360.com/api/knowledge-bases', {
         method: 'POST',
         body: formData
       });

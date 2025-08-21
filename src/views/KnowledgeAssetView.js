@@ -8,7 +8,7 @@ function KnowledgeAssetView({ onCreateNew, onEdit, onBack }) {
   const [hoveredAction, setHoveredAction] = useState(null);
 
   useEffect(() => {
-    fetch('http://16.170.162.72:5001/api/knowledge-bases')
+    fetch('https://integration.enowclear360.com/api/knowledge-bases')
       .then(response => response.json())
       .then(data => setKnowledgeBases(data))
       .catch(error => console.error('Error fetching knowledge bases:', error));
@@ -43,7 +43,7 @@ function KnowledgeAssetView({ onCreateNew, onEdit, onBack }) {
 
   const handleDeleteClick = (kbId) => {
     if (window.confirm(`Are you sure you want to delete knowledge base ${kbId}?`)) {
-      fetch(`http://16.170.162.72:5001/api/knowledge-bases/${kbId}`, { method: 'DELETE' })
+      fetch(`https://integration.enowclear360.com/api/knowledge-bases/${kbId}`, { method: 'DELETE' })
         .then(response => {
           if (response.ok) {
             setKnowledgeBases(knowledgeBases.filter(kb => kb.id !== kbId));

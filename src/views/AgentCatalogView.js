@@ -18,7 +18,7 @@ const AgentCatalogView = ({ onAgentClick }) => {
     const fetchAgents = async () => {
       try {
         setLoading(true);
-        const res = await api.get('/admin/agent-catelog');
+        const res = await api.get('/admin/agent-catelog/');
         console.log(res)
         const mappedAgents = res.data.map((agent, index) => ({
           id: `AG-${String(index + 1).padStart(2, '0')}`,
@@ -104,7 +104,7 @@ const AgentCatalogView = ({ onAgentClick }) => {
       };
 
       // Save the cloned agent to the backend
-      const res = await api.post('/admin/agent-catelog', backendAgent);
+      const res = await api.post('/admin/agent-catelog/', backendAgent);
       
       // Add the new agent to the list
       setAgents([clonedAgent, ...agents]);

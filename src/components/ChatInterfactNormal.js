@@ -174,22 +174,37 @@ export default function ChatInterface({ agentConfig }) {
     setIsLoading(true);
 
     try {
-      const response = await axios.post('http://16.170.162.72:8000/query', {
+      const response = await axios.post('https://fastapi.enowclear360.com/query', {
         agent_config: agentConfig,
         message: userMessage,
         thread_id: threadId
       });
 
-      // Start the typewriter effect with the API response
       setIsLoading(false);
       setIsTyping(true);
       setFullText(response.data.response);
 
     } catch (error) {
       console.error('Error sending message to API:', error);
-      setIsLoading(false);
-      setIsTyping(true);
-      setFullText("Sorry, there was an error processing your request. Please try again.");
+      
+      // Log the actual error response from the server
+      if (error.response) {
+        console.error('Server error response:', error.response.data);
+        console.error('Status:', error.response.status);
+        
+        // Display the actual error message from the server
+        const errorMessage = error.response.data?.detail || 
+                            error.response.data?.error || 
+                            "Sorry, there was an error processing your request.";
+        
+        setIsLoading(false);
+        setIsTyping(true);
+        setFullText(`Error: ${errorMessage}`);
+      } else {
+        setIsLoading(false);
+        setIsTyping(true);
+        setFullText("Sorry, there was an error processing your request. Please try again.");
+      }
     }
   }, [agentConfig, threadId]);
 

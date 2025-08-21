@@ -85,7 +85,7 @@ const AgentBuilderView = ({ agentData = null, onBack = () => { }, mode = 'create
   useEffect(() => {
     console.log(agentData)
     axios
-      .get('http://16.170.162.72:8000/documents')
+      .get('https://fastapi.enowclear360.com/documents')
       .then((response) => {
         console.log(response)
         const fetchedKBs = response.data.map((doc) => ({
